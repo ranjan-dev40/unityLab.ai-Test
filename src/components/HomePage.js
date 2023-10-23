@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import GetDetails from './GetDetails';
+// import GetDetails from './GetDetails';
 import { format } from 'date-fns'
 // import format from 'date-fns/format'
 import { ToastContainer, toast } from 'react-toastify';
@@ -64,7 +64,7 @@ function HomePage() {
   
           <article className='title'>
             <h1>{largeTitle.title}</h1>
-            <Link to="/post-details" component={<GetDetails/>}>Read Full Article</Link>
+            {/* <Link to="/post-details" component={<GetDetails/>}>Read Full Article</Link> */}
           </article>
   
           <p className='category'><span>Category:{query}</span></p>
@@ -82,14 +82,17 @@ function HomePage() {
                 </ul>
                 <p>Date</p>
               </div> */}
-              {items.map(({author, created_at, title, objectID }) => (
+              {items.map(({author, created_at, title, url, objectID }) => (
                 
                 <div key={objectID}>
-                  <h2>{title}</h2>
+                  {/* <h2>{title}</h2> */}
+                  <Link to={`/post-details/${objectID}`}><h2>{title}</h2></Link>
                   <ul>
                     <li>By {author}</li>
-                    {/* <li><Link to="/post-details" component={<GetDetails  objectID={objectID} />}>Read More</Link></li> */}
-                    <li><Link to={`/post-details/${objectID}`}>Read More</Link></li>
+                    {/* <li><Link to={`/post-details/${objectID}`}>Read More</Link></li> */}
+
+                    <li><a href={url} target='_blank' rel='noreferrer'> Read More </a></li>
+
 
                     <li></li> 
                   </ul>
