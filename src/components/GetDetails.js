@@ -51,7 +51,6 @@ function GetDetails() {
 
         <article className='title'>
           <h1>{largeTitle}</h1>
-          <p className='points'>Point: {point}</p>
 
         </article>
  
@@ -59,7 +58,8 @@ function GetDetails() {
        
         {isLoading ? <div className="spinner"></div> : <>
 
-          <article className='cards'>
+          {point && <p className='points'> Point:{point}</p>}
+          <article className='details'>
 
 
 

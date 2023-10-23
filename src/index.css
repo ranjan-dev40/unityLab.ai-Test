@@ -133,6 +133,10 @@ cursor: pointer;
   color: #fff;
   margin-bottom: 1rem;
 }
+.section .cards p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
 .section .cards div ul {
   display: flex;
   align-items: center;
@@ -151,7 +155,43 @@ text-decoration: underline;
  color: #fff;
 }
 
-.section .cards div p {
+.section .details div p {
+  color: slategray;
+}
+.section .details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.section .details div{
+  background-color: #161f34;
+  padding: 1rem;  
+  border-radius: 0.625rem;
+}
+.section .details h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.section .details div ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+}
+.section .details div ul li {
+color: slategray;
+}
+.section .details div ul li a {
+  color: slategray;
+text-decoration: underline;
+}
+.section .details div ul li a:hover {
+ color: #fff;
+}
+
+.section .details div p {
   color: slategray;
 }
 
