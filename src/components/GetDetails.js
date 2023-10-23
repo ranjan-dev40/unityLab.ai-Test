@@ -49,7 +49,7 @@ function GetDetails() {
       <section className='section'>
 
 
-        <article className='title'>
+        <article className='details-title'>
           <h1>{largeTitle}</h1>
 
         </article>
@@ -66,7 +66,8 @@ function GetDetails() {
             {children.map(({id, author, text}) => (
               <div key={id}>
                 <h2>{author}</h2>
-                <p>{text}</p>
+                {/* <p>{text}</p> */}
+                <div dangerouslySetInnerHTML={{__html: text} } className='comment'></div>
                 <ul>
                   <li></li> 
                 </ul>

@@ -105,6 +105,14 @@ cursor: pointer;
   text-align: center;
   margin-bottom: 1rem;
 }
+
+.section .details-title h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .section .title a {
   display: flex;
   align-items: center;
@@ -132,6 +140,9 @@ cursor: pointer;
 .section .cards h2 {
   color: #fff;
   margin-bottom: 1rem;
+}
+.section .cards h2:hover {
+  color: rgb(10, 18, 26);
 }
 .section .cards p {
   color: #fff;
@@ -191,7 +202,7 @@ text-decoration: underline;
  color: #fff;
 }
 
-.section .details div p {
+.section .details div .comment {
   color: slategray;
 }
 
